@@ -1,0 +1,11 @@
+syntax: glob
+*.o
+moc_*
+debug
+release
+Makefile
+Makefile.Debug
+Makefile.Release
+memory_*.qm
+memory
+memory.exe
