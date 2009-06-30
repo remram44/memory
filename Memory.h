@@ -63,6 +63,7 @@ class Memory : public QMainWindow {
 private:
     int m_iGridSize;
     bool m_bPlaying;
+    QDialog *m_Rules;
 
 public:
     Memory();
@@ -75,6 +76,9 @@ public slots:
     void setHard();
 
     void gameWon(int);
+
+    void showRules();
+    void about();
 
 };
 

@@ -15,4 +15,4 @@ HEADERS += Memory.h
 SOURCES += Memory.cpp
 
 TRANSLATIONS = memory.ts
-CODECFORTR = UTF-8
+CODECFORTR = ISO-8859-1

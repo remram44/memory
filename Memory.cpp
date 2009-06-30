@@ -45,7 +45,36 @@ Memory::Memory()
         hard->setCheckable(true); diff->addAction(hard);
         connect(hard, SIGNAL(triggered()), this, SLOT(setHard()));
     }
+    {
+        QMenu *help = menuBar()->addMenu(tr("&Help"));
+        QAction *rules = help->addAction(tr("Game &rules..."));
+        connect(rules, SIGNAL(triggered()), this, SLOT(showRules()));
+        QAction *aboutQt = help->addAction(tr("About &Qt"));
+        connect(aboutQt, SIGNAL(triggered()), qApp, SLOT(aboutQt()));
+        QAction *about = help->addAction(tr("&About Memory"));
+        connect(about, SIGNAL(triggered()), this, SLOT(about()));
+    }
     show();
+
+    m_Rules = new QDialog(this);
+    QVBoxLayout *l = new QVBoxLayout;
+    QTextEdit *text = new QTextEdit;
+    text->setReadOnly(true);
+    text->setHtml(tr("<h2>Rules</h2>"
+        "<p>This game is a <em>remake</em> of the classic game published by "
+        "Ravensburger in 1959. The game shows pairs of identical cards placed "
+        "randomly and showing their hidden side. You can reveal a card by "
+        "clicking on it. When you reveal two cards, if they are not identical, "
+        "they are hidden again.</p>"
+        
+        "<h2>Goal</h2>"
+        "<p>The goal is to reveal all the cards (as quickly as possible). "
+        "In order to win, you have to remember the position of every card to "
+        "be able to associate the pair when you discover the other card.</p>"));
+    l->addWidget(text);
+    l->setSizeConstraint(QLayout::SetFixedSize);
+    m_Rules->setModal(true);
+    m_Rules->setLayout(l);
 }
 
 void Memory::newGame()
@@ -106,6 +135,20 @@ void Memory::gameWon(int time)
 {
     QMessageBox::information(this, tr("Victory"),
         tr("You won the game in %1 seconds.").arg(time));
+}
+
+void Memory::showRules()
+{
+    m_Rules->show();
+}
+
+void Memory::about()
+{
+    QMessageBox::information(this, tr("About Memory..."),
+        tr("Memory is a game created by Rémi RAMPIN, aka remram44 "
+            "<remirampin@gmail.com>\n"
+            "It is not believed to be useful, it was written for educationnal "
+            "purpose."));
 }
 
 int main(int argc, char **argv)
