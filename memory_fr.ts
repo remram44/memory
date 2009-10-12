@@ -41,7 +41,7 @@
     <message>
         <location filename="Memory.cpp" line="44"/>
         <source>&amp;Hard</source>
-        <translation>Di&amp;fficile</translation>
+        <translation>Diffi&amp;cile</translation>
     </message>
     <message>
         <location filename="Memory.cpp" line="49"/>

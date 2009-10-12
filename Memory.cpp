@@ -57,6 +57,7 @@ Memory::Memory()
     show();
 
     m_Rules = new QDialog(this);
+    m_Rules->setWindowTitle(tr("About Memory"));
     QVBoxLayout *l = new QVBoxLayout;
     QTextEdit *text = new QTextEdit;
     text->setReadOnly(true);
