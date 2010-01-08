@@ -12,7 +12,7 @@
 void ssleep(unsigned int secs)
 {
 #ifdef __WIN32__
-    Sleep(secs);
+    Sleep(secs*1000);
 #else
     struct timespec req;
     req.tv_sec = secs;
