@@ -14,5 +14,5 @@ DESTDIR = ./
 HEADERS += Memory.h
 SOURCES += Memory.cpp
 
-TRANSLATIONS = memory.ts
+TRANSLATIONS = memory_fr.ts
 CODECFORTR = ISO-8859-1

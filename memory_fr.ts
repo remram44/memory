@@ -116,7 +116,7 @@ It is not believed to be useful, it was written for educationnal purpose.</sourc
         <oldsource>Memory is a game created by R�mi RAMPIN, aka remram44 &lt;remirampin@gmail.com&gt;
 It is not believed to be useful, it was written for educationnal purpose.</oldsource>
         <translation>Memory est un jeu créé par Rémi RAMPIN, alias remram44 &lt;remirampin@gmail.com&gt;
-Il n&apos;est vraiment utile, et a été écrit dans un but éducatif.</translation>
+Il n&apos;est pas vraiment utile, et a été écrit dans un but éducatif.</translation>
     </message>
 </context>
 </TS>
