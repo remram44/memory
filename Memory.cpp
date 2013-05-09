@@ -2,7 +2,7 @@
 
 #include <QApplication>
 
-#ifndef __WIN32__
+#ifndef _WIN32
 #include <unistd.h>
 #include <sys/time.h>
 #else
@@ -11,7 +11,7 @@
 
 void ssleep(unsigned int secs)
 {
-#ifdef __WIN32__
+#ifdef _WIN32
     Sleep(secs*1000);
 #else
     struct timespec req;
