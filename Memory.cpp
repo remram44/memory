@@ -1,6 +1,19 @@
 #include "Memory.h"
 
 #include <QApplication>
+#include <QAction>
+#include <QActionGroup>
+#include <QDialog>
+#include <QGridLayout>
+#include <QLocale>
+#include <QMenu>
+#include <QMenuBar>
+#include <QMessageBox>
+#include <QPushButton>
+#include <QTextEdit>
+#include <QTimer>
+#include <QTranslator>
+#include <QVBoxLayout>
 
 #ifndef _WIN32
 #include <unistd.h>

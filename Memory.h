@@ -1,7 +1,11 @@
 #ifndef MEMORY_H
 #define MEMORY_H
 
-#include <QtGui>
+#include <QDialog>
+#include <QMainWindow>
+#include <QPushButton>
+#include <QTime>
+#include <QWidget>
 
 class Card : public QWidget {
 
